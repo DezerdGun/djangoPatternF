@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-def text(request):
-    return HttpResponse("Hello wolrd")
+def hello_view(request):
+    return render (request,'hello.html')
