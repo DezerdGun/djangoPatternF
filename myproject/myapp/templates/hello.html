@@ -73,18 +73,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
                     <ul class="navbar-nav  ">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                      {% for item in menu_items %}
+                      <li class="nav-item{% if item.active %} active{% endif %}">
+                          <a class="nav-link" href="">{{ item.name }}{% if item.active %} <span class="sr-only">(current)</span>{% endif %}</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html"> About </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="class.html"> Classes </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                      </li>
+                  {% endfor %}
                     </ul>
                     <form class="form-inline">
                       <button class="btn ml-3 ml-lg-5 nav_search-btn" type="submit"></button>
