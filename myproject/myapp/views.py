@@ -11,3 +11,11 @@ def hello_view(request):
         {"name": "Blog", "url": "blog", "active": False},
     ]
     return render(request, 'hello.html', {'menu_items': menu_items})
+
+def slider_view(request):
+    slides = [
+        {'active': True, 'title': 'Boxing Center', 'button_text': 'Contact Us'},
+        {'active': False, 'title': 'Boxing Center', 'button_text': 'Contact Us'},
+        {'active': False, 'title': 'Boxing Center', 'button_text': 'Contact Us'},
+    ]
+    return render(request, 'hello.html', {'slides': slides})
